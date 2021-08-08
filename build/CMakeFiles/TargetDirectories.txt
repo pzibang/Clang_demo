@@ -1,0 +1,4 @@
+/home/pzb/codes/clang_project/build/CMakeFiles/rebuild_cache.dir
+/home/pzb/codes/clang_project/build/CMakeFiles/edit_cache.dir
+/home/pzb/codes/clang_project/build/CMakeFiles/intrinsics_gen.dir
+/home/pzb/codes/clang_project/build/CMakeFiles/hello-world.dir
