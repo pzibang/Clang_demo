@@ -4,22 +4,6 @@ project(hello-world)
  
 find_package(LLVM REQUIRED CONFIG)
 
-#Eigen library
-find_package(Eigen3 REQUIRED)
-include_directories(${EIGEN3_INCLUDE_DIR})
-#set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
-#find_package(Eigen3)
-if(NOT EIGEN3_FOUND)
-  # Fallback to cmake_modules
-  find_package(cmake_modules REQUIRED)
-  find_package(Eigen REQUIRED)
-  set(EIGEN3_INCLUDE_DIRS ${EIGEN_INCLUDE_DIRS})
-  set(EIGEN3_LIBRARIES ${EIGEN_LIBRARIES})  # Not strictly necessary as Eigen is head only
-  # Possibly map additional variables to the EIGEN3_ prefix.
-else() 
-  set(EIGEN3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIR})
-endif()
-
 aux_source_directory(. MAIN_SRC)
 
 message(STATUS "This is BINARY dir " ${PROJECT_BINARY_DIR})
